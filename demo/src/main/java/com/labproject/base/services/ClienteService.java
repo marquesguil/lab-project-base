@@ -22,5 +22,12 @@ public class ClienteService {
                 "Objeto não encontrado! Id: " + id + ", Tipo: " + Cliente.class.getName()));
     }
 
+//    public Cliente gravar(Object clienteObj) throws ObjectNotFoundException {
+//
+//        Optional<Cliente> obj = repo.save(cliente);
+//        return obj.orElseThrow(() -> new ObjectNotFoundException(
+//                "Objeto não encontrado! Id: " + id + ", Tipo: " + Cliente.class.getName()));
+//    }
+
 
 }
