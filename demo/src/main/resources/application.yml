@@ -1,15 +1,15 @@
-#spring:
-#  jpa:
-#    show-slq: true
-#    properties:
-#      hibernate:
-#        format_sql: true
-#  h2:
-#    console:
-#      enable: true
-#      path: /h2-console
-#  datasource:
-#    url: jdbc:h2:file:~/test
-#    username: Test
-#    password:
-#    driver-class-name: org.h2.Driver
+spring:
+    datasource:
+        driver-class-name: org.h2.Driver
+        password: ''
+        url: jdbc:h2:mem:lab-base
+        username: lab
+    h2:
+        console:
+            enabled: true
+            path: /h2-console
+    jpa:
+        properties:
+            hibernate:
+                format_sql: true
+        show-sql: true

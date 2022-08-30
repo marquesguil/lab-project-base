@@ -1,7 +1,5 @@
 package com.labproject.base.services;
 
-
-
 import com.labproject.base.domain.Cliente;
 import com.labproject.base.exception.ObjectNotFoundException;
 import com.labproject.base.repositories.ClienteRepository;
@@ -22,12 +20,10 @@ public class ClienteService {
                 "Objeto não encontrado! Id: " + id + ", Tipo: " + Cliente.class.getName()));
     }
 
-//    public Cliente gravar(Object clienteObj) throws ObjectNotFoundException {
-//
-//        Optional<Cliente> obj = repo.save(cliente);
-//        return obj.orElseThrow(() -> new ObjectNotFoundException(
-//                "Objeto não encontrado! Id: " + id + ", Tipo: " + Cliente.class.getName()));
-//    }
+    public Cliente gravar(Cliente cliente) throws ObjectNotFoundException {
+        cliente.setId(null);
+        return repo.save(cliente);
+    }
 
 
 }

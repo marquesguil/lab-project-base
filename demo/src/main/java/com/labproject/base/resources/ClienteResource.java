@@ -29,12 +29,12 @@ public class ClienteResource {
         return ResponseEntity.ok().body(obj);
     }
 
-//    @RequestMapping(method = RequestMethod.POST)
-//    public ResponseEntity<?> gravar(@PathVariable Object cliente) throws ObjectNotFoundException {
-////        cliente = service.gravar(cliente);
-////        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
-////                .path("/{id}").buildAndExpand(obj.getId()).toUri();
-////        return ResponseEntity.ok().body(cliente);
-//    }
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<?> gravar(@PathVariable Cliente cliente) {
+        cliente = service.gravar(cliente);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(cliente.getId()).toUri();
+        return ResponseEntity.created(uri).build();
+    }
 
 }
